@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  jenkins:
+    build:
+      context: .
+    container_name: jenkins-blueocean
+    restart: on-failure
+    networks:
+      - jenkins
+    environment:
+      - DOCKER_HOST=unix:///run/docker.sock
+    ports:
+      - "8080:8080"    # Interfaz web de Jenkins
+      - "50000:50000"  # Puerto para agentes
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - /run/docker.sock:/var/run/docker.sock  # Montar el socket de Docker
+      - /home/ubuntu/.ssh/:/var/jenkins_home/.ssh/
+
+networks:
+  jenkins:
+    driver: bridge
+
+volumes:
+  jenkins-data:
