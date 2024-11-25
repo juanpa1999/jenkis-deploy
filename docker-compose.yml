@@ -9,14 +9,16 @@ services:
     networks:
       - jenkins
     environment:
-      - DOCKER_HOST=unix:///run/docker.sock
+      - DOCKER_HOST=unix:///run/docker.sock # dokcer socket para poder interactuar con el demonio de docker en la maquina host
     ports:
       - "8080:8080"    # Interfaz web de Jenkins
       - "50000:50000"  # Puerto para agentes
     volumes:
       - jenkins-data:/var/jenkins_home
       - /run/docker.sock:/var/run/docker.sock  # Montar el socket de Docker
-      - /home/ubuntu/.ssh/:/var/jenkins_home/.ssh/
+      - /home/ubuntu/.ssh/:/var/jenkins_home/.ssh/ # para las llaves publicas pero como en la imagen de docker el ultimo usuario es root te toca modificar
+      #la imagen de docker o aqui pasarle la 
+      # la ruta del las llaves en container de jenkis en el directorio de root en ves del home de jenkis
 
 networks:
   jenkins:
