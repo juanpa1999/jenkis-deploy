@@ -19,6 +19,11 @@ services:
       - /home/ubuntu/.ssh/:/var/jenkins_home/.ssh/ # para las llaves publicas pero como en la imagen de docker el ultimo usuario es root te toca modificar
       #la imagen de docker o aqui pasarle la 
       # la ruta del las llaves en container de jenkis en el directorio de root en ves del home de jenkis
+      # example !!!! - /home/ubuntu/.ssh/:/root/
+
+      # o solo vete para /var/jenkins_home/.ssh/ en el contenedor y copia esta car`peta en la carptye root
+      # cd /var/jenkins_home/
+      # cp -r .ssh/ /root/
 
 networks:
   jenkins:
