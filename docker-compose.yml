@@ -16,7 +16,9 @@ services:
     volumes:
       - jenkins-data:/var/jenkins_home
       - /run/docker.sock:/var/run/docker.sock  # Montar el socket de Docker
-      - /root/.ssh/:/root/.ssh/ # el ultimo usuario en el docker file es el usuario ROOT, asi que la forma de que jenkis pueda leer los archivos de github con los permisos de jenkis debes compartile las llaves del root de tu usuario padre, y estas llaves ya deben tener un uso por que si no los know_host no te permitiran vincular las llaver correctamente
+      - /root/.ssh/:/root/.ssh/ # el ultimo usuario en el docker file es el usuario ROOT, asi que la forma de que jenkis pueda leer los archivos de github con 
+      #los permisos de jenkis debes compartile las llaves del root de tu usuario padre, y estas llaves ya deben tener un uso por que si no los know_host no te 
+      #permitiran vincular las llaver correctamente
       # paso 1: crear unas llaves para git hub con el root user de la maquina host y despues has un request para quue github qiede agregado como un known host
       # desues de este paso ya puedes inciar esta docker-compose.yml file.
 
