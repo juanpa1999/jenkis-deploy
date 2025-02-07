@@ -28,7 +28,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                sh 'git clone git@github.com:juanpa1999/amazon-test.git'  // Reemplaza con tu repo
+                sh 'git clone git@github.com:juanpa1999/Docker_image_creation.git'  // Reemplaza con tu repo
             }
         }
 
