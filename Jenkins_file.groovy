@@ -35,9 +35,9 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "docker build -t ${IMAGE_FRONT}:${IMAGE_TAG} ./amazon-test/back"
-                    sh "docker build -t ${IMAGE_BACK}:${IMAGE_TAG} ./amazon-test/front"
-                    sh "docker build -t ${IMAGE_DB}:${IMAGE_TAG} ./amazon-test/db"
+                    sh "docker build -t ${IMAGE_FRONT}:${IMAGE_TAG} ./Docker_image_creation/back"
+                    sh "docker build -t ${IMAGE_BACK}:${IMAGE_TAG} ./Docker_image_creation/front"
+                    sh "docker build -t ${IMAGE_DB}:${IMAGE_TAG} ./Docker_image_creation/db"
                 }
             }
         }
