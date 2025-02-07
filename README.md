@@ -37,7 +37,7 @@ Inside the `Dockerfile`, Docker is installed to allow the container to manage ot
 In **line #18** of the `docker-compose.yml` file, the volume `/var/run/docker.sock:/var/run/docker.sock` is mounted to allow the Jenkins container to communicate with the host's Docker daemon.
 
 > **Image Reference**:
-> ![Docker-in-Docker Setup](https://via.placeholder.com/600x300?text=Docker+Socket+Mapping)
+> ![Docker-in-Docker Setup](https://camo.githubusercontent.com/0ecb21c2d2c2dabf45a825e7bcd2151a3ade2a942aa1e55cccec03d77fd1095f/68747470733a2f2f6a656e6b696e732e696f2f73697465732f64656661756c742f66696c65732f6a656e6b696e735f6c6f676f2e706e67)
 
 ## Utility Scripts
 
