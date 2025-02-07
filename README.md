@@ -2,7 +2,7 @@
 
 > ![Docker-in-Docker Setup](https://camo.githubusercontent.com/0ecb21c2d2c2dabf45a825e7bcd2151a3ade2a942aa1e55cccec03d77fd1095f/68747470733a2f2f6a656e6b696e732e696f2f73697465732f64656661756c742f66696c65732f6a656e6b696e735f6c6f676f2e706e67)
 
-> ![Jenkins UI]([https://1000marcas.net/wp-content/uploads/2021/05/Docker-Logo-2.png](https://nattia.com/wp-content/uploads/2023/11/que-es-docker.webp))
+> ![Jenkins UI](https://www.stackhero.io/assets/src/images/servicesLogos/openGraphVersions/docker.png?d87f4381)
 
 This repository contains the necessary files to deploy Jenkins inside a Docker container. It uses a customized Dockerfile to interact with the host machine's Docker socket.
 
