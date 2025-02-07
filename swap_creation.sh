@@ -14,4 +14,4 @@ sudo swapon /swapfile
 
 sleep 3
 
-sudo vim /etc/fstab >> /swapfile none swap sw 0 0
+# aggrega esta linea manual /swapfile none swap sw 0 0
