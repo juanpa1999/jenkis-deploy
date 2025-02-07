@@ -1,13 +1,3 @@
-install docker y despues crear un swap file>
-
-#\------------------------------- SWAP
-sudo fallocate -l 2G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo vim /etc/fstab >> /swapfile none swap sw 0 0
-#/-------------------------------------------------------
-
 #/----------------------------INSTALLL DOCKER
 
 #instalar docker wsl:
