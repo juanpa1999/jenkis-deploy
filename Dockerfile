@@ -6,7 +6,7 @@ USER root
 RUN mkdir -p /var/jenkins_home/.ssh && chown -R jenkins:jenkins /var/jenkins_home/.ssh
 
 # Instalar dependencias necesarias
-RUN apt-get update && apt-get install -y lsb-release curl gnupg
+RUN apt-get update && apt-get install -y lsb-release curl gnupg jq
 
 # Agregar la llave GPG de Docker
 RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
