@@ -14,7 +14,7 @@ services:
       - "8080:8080"    # Interfaz web de Jenkins
       - "50000:50000"  # Puerto para agentes
     volumes:
-      - jenkins-data:/var/jenkins_home
+      - /home/jenkins-data:/var/jenkins_home
       - /run/docker.sock:/var/run/docker.sock  # Montar el socket de Docker
       - /root/.ssh/:/root/.ssh/ # el ultimo usuario en el docker file es el usuario ROOT, asi que la forma de que jenkis pueda leer los archivos de github con 
       #los permisos de jenkis debes compartile las llaves del root de tu usuario padre, y estas llaves ya deben tener un uso por que si no los know_host no te 
